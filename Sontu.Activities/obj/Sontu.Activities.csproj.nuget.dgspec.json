@@ -1,0 +1,108 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\SubhadipMaity\\OneDrive - Centelli\\Desktop\\Study\\Custom Library\\Sontu.Activities\\Sontu.Activities\\Sontu.Activities.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\SubhadipMaity\\OneDrive - Centelli\\Desktop\\Study\\Custom Library\\Sontu.Activities\\Sontu.Activities\\Sontu.Activities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SubhadipMaity\\OneDrive - Centelli\\Desktop\\Study\\Custom Library\\Sontu.Activities\\Sontu.Activities\\Sontu.Activities.csproj",
+        "projectName": "Sontu.Activities.Activities",
+        "projectPath": "C:\\Users\\SubhadipMaity\\OneDrive - Centelli\\Desktop\\Study\\Custom Library\\Sontu.Activities\\Sontu.Activities\\Sontu.Activities.csproj",
+        "packagesPath": "C:\\Users\\SubhadipMaity\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SubhadipMaity\\OneDrive - Centelli\\Desktop\\Study\\Custom Library\\Sontu.Activities\\Sontu.Activities\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\SubhadipMaity\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Users\\SubhadipMaity\\OneDrive - Centelli\\Desktop\\Office Project work\\OHIP": {},
+          "C:\\Users\\SubhadipMaity\\OneDrive - Centelli\\Desktop\\Study\\Custom Library\\Sontu.Activities\\Output\\Activities\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://gallery.uipath.com/api/v3/index.json": {},
+          "https://pkgs.dev.azure.com/uipath/Public.Feeds/_packaging/UiPath-Official/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.4, )"
+            },
+            "System.Activities.ViewModels": {
+              "target": "Package",
+              "version": "[1.0.0-20250625.2, )"
+            },
+            "UiPath.Activities.Api": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[24.10.1, )"
+            },
+            "UiPath.Workflow": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0-20240401-07, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

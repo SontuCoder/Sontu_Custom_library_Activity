@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Sontu.Activities.Packaging/Sontu.Activities.Packaging.csproj" />
+  <Project Path="Sontu.Activities.Tests/Sontu.Activities.Tests.csproj" />
+  <Project Path="Sontu.Activities/Sontu.Activities.csproj" />
+</Solution>

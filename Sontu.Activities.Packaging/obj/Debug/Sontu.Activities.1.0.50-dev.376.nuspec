@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Sontu.Activities</id>
+    <version>1.0.50-dev.376</version>
+    <authors>UiPath</authors>
+    <iconUrl>https://download.uipath.com/UI_icon.png?web</iconUrl>
+    <description>Package Description</description>
+    <tags>UiPathActivities</tags>
+    <repository type="git" />
+    <dependencies>
+      <group targetFramework="net6.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Debug\net6.0\Sontu.Activities.dll" target="lib\net6.0\Sontu.Activities.dll" />
+  </files>
+</package>

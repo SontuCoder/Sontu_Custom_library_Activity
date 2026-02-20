@@ -1,0 +1,21 @@
+{
+  "resourceManagerName": "Sontu.Activities.Resources.Resources",
+  "activities": [
+    {
+      "fullName": "Sontu.Activities.Auth.AuthScope",
+      "shortName": "AuthScope",
+      "displayNameKey": "Auth Scope Name",
+      "descriptionKey": "Get Auth cookies",
+      "categoryKey": "AuthFolder",
+      "viewModelType": "Sontu.Activities.ViewModels.Auth.AuthViewModel"
+    },
+    {
+      "fullName": "Sontu.Activities.Auth.GetMe",
+      "shortName": "GetMe",
+      "displayNameKey": "Get Me",
+      "descriptionKey": "Get details of current user",
+      "categoryKey": "AuthFolder",
+      "viewModelType": "Sontu.Activities.ViewModels.Auth.GetMeViewModel"
+    }
+  ]
+}

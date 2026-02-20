@@ -1,0 +1,125 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Sontu.Activities.Packaging/1.0.26": {
+        "dependencies": {
+          "Sontu.Activities.Activities": "1.0.0",
+          "Sontu.Activities": "1.0.0.0"
+        },
+        "runtime": {
+          "Sontu.Activities.Packaging.dll": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.4": {
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.4.30916"
+          }
+        }
+      },
+      "System.Activities.ViewModels/1.0.0-20250625.2": {
+        "runtime": {
+          "lib/net6.0/System.Activities.ViewModels.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "resources": {
+          "lib/net6.0/de/System.Activities.ViewModels.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0/es-MX/System.Activities.ViewModels.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net6.0/es/System.Activities.ViewModels.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0/fr/System.Activities.ViewModels.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0/ja/System.Activities.ViewModels.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0/ko/System.Activities.ViewModels.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0/pt-BR/System.Activities.ViewModels.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0/pt/System.Activities.ViewModels.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net6.0/ru/System.Activities.ViewModels.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0/tr/System.Activities.ViewModels.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0/zh-CN/System.Activities.ViewModels.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net6.0/zh-TW/System.Activities.ViewModels.resources.dll": {
+            "locale": "zh-TW"
+          }
+        }
+      },
+      "Sontu.Activities.Activities/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.4",
+          "System.Activities.ViewModels": "1.0.0-20250625.2"
+        },
+        "runtime": {
+          "Sontu.Activities.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Sontu.Activities/1.0.0.0": {
+        "runtime": {
+          "Sontu.Activities.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Sontu.Activities.Packaging/1.0.26": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Newtonsoft.Json/13.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pdgNNMai3zv51W5aq268sujXUyx7SNdE2bj1wZcWjAQrKMFZV260lbqYop1d2GM67JI1huLRwxo9ZqnfF/lC6A==",
+      "path": "newtonsoft.json/13.0.4",
+      "hashPath": "newtonsoft.json.13.0.4.nupkg.sha512"
+    },
+    "System.Activities.ViewModels/1.0.0-20250625.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-B96tLdHls2eDpOHmj7RweSXqTTUV7ZUIfuVN6O9GkBbSbgPQJXWOgF0z9XC2JB1YMUr9cJ1nTZCcPtgsl7/mbg==",
+      "path": "system.activities.viewmodels/1.0.0-20250625.2",
+      "hashPath": "system.activities.viewmodels.1.0.0-20250625.2.nupkg.sha512"
+    },
+    "Sontu.Activities.Activities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Sontu.Activities/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
