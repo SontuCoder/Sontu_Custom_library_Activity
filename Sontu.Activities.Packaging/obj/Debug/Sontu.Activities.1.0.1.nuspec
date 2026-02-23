@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Sontu.Activities</id>
-    <version>1.0.2</version>
+    <version>1.0.1</version>
     <authors>Sontu</authors>
     <iconUrl>https://github.com/SontuCoder/Expense-Tracker/blob/main/img/image copy 8.png?raw=true</iconUrl>
     <description>UiPath custom activities to integrat Sontu Library.</description>

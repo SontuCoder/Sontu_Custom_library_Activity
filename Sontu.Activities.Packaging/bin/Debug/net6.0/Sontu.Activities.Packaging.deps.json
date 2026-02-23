@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "Sontu.Activities.Packaging/1.0.41": {
+      "Sontu.Activities.Packaging/1.0.2": {
         "dependencies": {
           "Sontu.Activities.Activities": "1.0.0",
           "Sontu.Activities": "1.0.0.0"
@@ -92,7 +92,7 @@
     }
   },
   "libraries": {
-    "Sontu.Activities.Packaging/1.0.41": {
+    "Sontu.Activities.Packaging/1.0.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -11,7 +11,7 @@
 		<VersionBuild>$([System.DateTime]::UtcNow.DayOfYear.ToString("F0"))</VersionBuild>
 		<VersionRevision>$([System.DateTime]::UtcNow.TimeOfDay.TotalMinutes.ToString("F0"))</VersionRevision>
 		<PackageId>Sontu.Activities</PackageId>
-		<VersionPrefix>1.0.41</VersionPrefix>
+		<VersionPrefix>1.0.2</VersionPrefix>
 		<!--<VersionPrefix Condition="'$(Configuration)' == 'Release'">1.0.0</VersionPrefix>
 		<VersionPrefix Condition="'$(Configuration)' == 'Debug'">1.0.$(VersionBuild)-dev.$(VersionRevision)</VersionPrefix>-->
 		<Authors>Sontu</Authors>
@@ -21,7 +21,7 @@
 		<PackageTags>UiPath Activities for Sontu Library</PackageTags>
 		<Product>Sontu.Activities.Packaging</Product>
 		<PackageIconUrl>https://github.com/SontuCoder/Expense-Tracker/blob/main/img/image%20copy%208.png?raw=true</PackageIconUrl>
-		<PackageOutputPath>..\Output\Activities\Packages\</PackageOutputPath>
+		<PackageOutputPath>..\Output\Activities\</PackageOutputPath>
 		<TargetsForTfmSpecificBuildOutput>AddDlls</TargetsForTfmSpecificBuildOutput>
 		<ProduceReferenceAssembly>False</ProduceReferenceAssembly>
 	</PropertyGroup>
@@ -42,13 +42,13 @@
 		</ItemGroup>
 	</Target>
 	
-	<Target Name="CleanPackageFiles" BeforeTargets="Build">
+	<!-- <Target Name="CleanPackageFiles" BeforeTargets="Build">
 		<Message Text="Deleting packages ..." />
 		<ItemGroup>
 			<PackageFilesToDelete Include="$(PackageOutputPath)\$(PackageId)*.nupkg" />
 		</ItemGroup>
 		<Delete Files="@(PackageFilesToDelete)" ContinueOnError="WarnAndContinue" />
-	</Target>
+	</Target> -->
 	
 	<ItemGroup>
 		<ProjectReference Include="..\Sontu.Activities\Sontu.Activities.csproj">
