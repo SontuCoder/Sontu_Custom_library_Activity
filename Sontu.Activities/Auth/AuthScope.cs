@@ -3,7 +3,6 @@ using System.Activities;
 using System.ComponentModel;
 using System.Net;
 using System.Text;
-using UiPath.Robot.Activities.Api;
 
 namespace Sontu.Activities.Auth
 {
@@ -16,26 +15,9 @@ namespace Sontu.Activities.Auth
 
         #region Properties
 
-        [Category("Input")]
-        [RequiredArgument]
-        [DisplayName("Email")]
-        [Description("The email ID for authentication.")]
         public InArgument<string> Email { get; set; }
-
-        [Category("Input")]
-        [RequiredArgument]
-        [DisplayName("Password")]
-        [Description("The password for authentication.")]
         public InArgument<string> Password { get; set; }
-
-        [Category("Output")]
-        [Description("Authentication Cookie.")]
-        [DisplayName("Cookies")]
         public OutArgument<CookieContainer> Cookie { get; set; }
-
-        [Category("Output")]
-        [Description("Authentication error message.")]
-        [DisplayName("Error")]
         public OutArgument<string> Error { get; set; }
 
         [Browsable(false)]
@@ -83,9 +65,11 @@ namespace Sontu.Activities.Auth
             if (cookieJar != null)
             {
                 GlobalAuthStore.CookieContainer = cookieJar;
+                GlobalAuthStore.IsScopeActive = true;
+                GlobalAuthStore.UserEmail = email;
             }
             if (Body != null)
-                context.ScheduleActivity(Body);
+                context.ScheduleActivity( Body, OnBodyCompleted );
         }
 
         #endregion
@@ -149,6 +133,12 @@ namespace Sontu.Activities.Auth
                 errorMessage = ex.Message;
                 return null;
             }
+        }
+
+
+        private void OnBodyCompleted( NativeActivityContext context, ActivityInstance completedInstance)
+        {
+            GlobalAuthStore.IsScopeActive = false;
         }
 
         #endregion

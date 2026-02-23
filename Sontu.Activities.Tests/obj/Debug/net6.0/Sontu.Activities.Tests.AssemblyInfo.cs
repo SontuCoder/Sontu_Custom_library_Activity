@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sontu.Activities.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73e186fdbb7e02f6ec1890c4313ca7e3b1dca577")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+66b5dafc26dfa67f8d177029da477aee80fdb9a4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sontu.Activities.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sontu.Activities.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

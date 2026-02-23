@@ -79,6 +79,15 @@ namespace Sontu.Activities {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sontu.Library.Book.
+        /// </summary>
+        public static string BookFolder {
+            get {
+                return ResourceManager.GetString("BookFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to http://127.0.0.1:8000.
         /// </summary>
         public static string URL_Prefix {

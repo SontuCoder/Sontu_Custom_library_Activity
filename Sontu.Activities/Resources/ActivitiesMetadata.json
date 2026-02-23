@@ -16,6 +16,30 @@
       "descriptionKey": "Get details of current user",
       "categoryKey": "AuthFolder",
       "viewModelType": "Sontu.Activities.ViewModels.Auth.GetMeViewModel"
+    },
+    {
+      "fullName": "Sontu.Activities.Auth.NoAuthScope",
+      "shortName": "NoAuthScope",
+      "displayNameKey": "No Auth Scope",
+      "descriptionKey": "Use for hold Library activities.",
+      "categoryKey": "AuthFolder",
+      "viewModelType": "Sontu.Activities.ViewModels.Auth.NoAuthViewModel"
+    },
+    {
+      "fullName": "Sontu.Activities.Book.GetBook",
+      "shortName": "GetBookDetailsById",
+      "displayNameKey": "Get Book Details By ID",
+      "descriptionKey": "Use for get book details.",
+      "categoryKey": "BookFolder",
+      "viewModelType": "Sontu.Activities.ViewModels.Book.GetBookViewModel"
+    },
+    {
+      "fullName": "Sontu.Activities.Book.GetAllBooks",
+      "shortName": "GetAllBookDetails",
+      "displayNameKey": "Get All Books",
+      "descriptionKey": "Use for get all books details.",
+      "categoryKey": "BookFolder",
+      "viewModelType": "Sontu.Activities.ViewModels.Book.GetAllBookViewModel"
     }
   ]
 }

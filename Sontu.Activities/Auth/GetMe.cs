@@ -16,15 +16,7 @@ namespace Sontu.Activities.Auth
         #endregion
 
         #region Properties
-
-        [Category("Output")]
-        [Description("Authentication error message.")]
-        [DisplayName("Error")]
         public OutArgument<string> Error { get; set; }
-
-        [Category("Output")]
-        [Description("User details from DB.")]
-        [DisplayName("User Details")]
         public OutArgument<AuthUserResponse> UserDetails { get; set; }
 
         #endregion
@@ -34,15 +26,14 @@ namespace Sontu.Activities.Auth
         {
             string errorMessage = null;
             AuthUserResponse userDate = null;
-            var cookies = GlobalAuthStore.CookieContainer;
 
-            if (cookies == null)
+            if(!GlobalAuthStore.IsScopeActive)
             {
-                Error.Set(context, "This activity must inside in Auth Scope or No Auth Scope.");
+                var msg = "Activity must be used inside AuthScope.";
+                Error.Set(context, msg);
                 UserDetails.Set(context, null);
-                throw new InvalidOperationException("This activity must inside in Auth Scope or No Auth Scope.");
+                throw new InvalidOperationException(msg);
             }
-
 
             userDate = GetUser(out errorMessage);
 

@@ -29,7 +29,7 @@ namespace Sontu.Activities.ViewModels.Auth
             Error.Tooltip = "The error message if authentication fails.";
             Error.IsPrincipal = false;
 
-            UserDetails.DisplayName = "User Details";
+            UserDetails.DisplayName = "UserDetails";
             UserDetails.Tooltip = "The user details if authentication success.";
             UserDetails.IsPrincipal = true;
             UserDetails.OrderIndex = 0;

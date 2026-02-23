@@ -7,6 +7,8 @@ namespace Sontu.Activities.Helpers
     public static class GlobalAuthStore
     {
         public static CookieContainer CookieContainer { get; set; }
+        public static string UserEmail { get; set; }
+        public static bool IsScopeActive { get; set; }
     }
     public static class ActivityContextExtensions
     {
