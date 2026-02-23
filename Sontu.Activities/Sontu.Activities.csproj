@@ -42,6 +42,7 @@
   <ItemGroup>
     <Folder Include="Admin\" />
     <Folder Include="Resources\Icons\" />
+    <Folder Include="ViewModels\Admin\" />
   </ItemGroup>
 
 </Project>

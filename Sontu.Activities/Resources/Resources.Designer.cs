@@ -61,6 +61,15 @@ namespace Sontu.Activities {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sontu.Library.Admin.
+        /// </summary>
+        public static string AdminFolder {
+            get {
+                return ResourceManager.GetString("AdminFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sontu.Library.Auth.
         /// </summary>
         public static string AuthFolder {

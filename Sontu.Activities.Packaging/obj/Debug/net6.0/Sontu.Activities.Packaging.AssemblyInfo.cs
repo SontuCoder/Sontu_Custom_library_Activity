@@ -13,9 +13,10 @@ using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sontu")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyDescriptionAttribute("\r\n\t\t\tUiPath custom activities to integrat Sontu Library.\r\n\t\t")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("\r\n\t\t\tUiPath custom activities to integrat Sontu Library. Version [1.0.*] has only" +
+    " Auth Activities and Book Activities.\r\n\t\t")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.2.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.2+d611b3e59367e067e296992a222cf3dcb46c36df")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.2+7483ef0aefc1b5c1df8037853bc629861b1838bb")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sontu.Activities.Packaging")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sontu.Activities.Packaging")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.2.0")]

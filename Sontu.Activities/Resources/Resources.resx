@@ -127,6 +127,9 @@
   <data name="BookFolder" xml:space="preserve">
     <value>Sontu.Library.Book</value>
   </data>
+  <data name="AdminFolder" xml:space="preserve">
+    <value>Sontu.Library.Admin</value>
+  </data>
   <data name="URL_Prefix" xml:space="preserve">
     <value>http://127.0.0.1:8000</value>
     <comment>URL prefix</comment>
