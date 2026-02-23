@@ -30,7 +30,7 @@ namespace Sontu.Activities.ViewModels.Book
             PersistValuesChangedDuringInit();
 
             Error.DisplayName = "Error";
-            Error.Tooltip = "The error message if authentication fails.";
+            Error.Tooltip = "The error message.";
             Error.IsPrincipal = false;
             Error.OrderIndex = 1;
 

@@ -11,12 +11,13 @@
 		<VersionBuild>$([System.DateTime]::UtcNow.DayOfYear.ToString("F0"))</VersionBuild>
 		<VersionRevision>$([System.DateTime]::UtcNow.TimeOfDay.TotalMinutes.ToString("F0"))</VersionRevision>
 		<PackageId>Sontu.Activities</PackageId>
-		<VersionPrefix>1.0.2</VersionPrefix>
+		<!--<VersionPrefix>1.1.1</VersionPrefix>-->
+		<VersionPrefix>1.1.1-dev.3</VersionPrefix>
 		<!--<VersionPrefix Condition="'$(Configuration)' == 'Release'">1.0.0</VersionPrefix>
 		<VersionPrefix Condition="'$(Configuration)' == 'Debug'">1.0.$(VersionBuild)-dev.$(VersionRevision)</VersionPrefix>-->
 		<Authors>Sontu</Authors>
 		<Description>
-			UiPath custom activities to integrat Sontu Library. Version [1.0.*] has only Auth Activities and Book Activities.
+			UiPath custom activities to integrat Sontu Library. Version [1.0.*] has only Auth Activities and Book Activities. Version [1.1.*] -&gt; Admin Activities added.
 		</Description>
 		<PackageTags>UiPath Activities for Sontu Library</PackageTags>
 		<Product>Sontu.Activities.Packaging</Product>

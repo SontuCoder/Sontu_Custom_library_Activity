@@ -161,7 +161,7 @@
     "C:\\Users\\SubhadipMaity\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "1.0.2",
+    "version": "1.1.1-dev.3",
     "restore": {
       "projectUniqueName": "C:\\Users\\SubhadipMaity\\OneDrive - Centelli\\Desktop\\Study\\Custom Library\\Sontu.Activities\\Sontu.Activities.Packaging\\Sontu.Activities.Packaging.csproj",
       "projectName": "Sontu.Activities",
@@ -180,7 +180,7 @@
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
         "C:\\Users\\SubhadipMaity\\OneDrive - Centelli\\Desktop\\Office Project work\\OHIP": {},
-        "C:\\Users\\SubhadipMaity\\OneDrive - Centelli\\Desktop\\Study\\Custom Library\\Sontu.Activities\\Output\\Activities\\Packages": {},
+        "C:\\Users\\SubhadipMaity\\OneDrive - Centelli\\Desktop\\Study\\Custom Library\\Sontu.Activities\\Output\\Activities": {},
         "https://api.nuget.org/v3/index.json": {},
         "https://gallery.uipath.com/api/v3/index.json": {},
         "https://pkgs.dev.azure.com/uipath/Public.Feeds/_packaging/UiPath-Official/nuget/v3/index.json": {}

@@ -132,7 +132,7 @@ namespace Sontu.Activities.Book
 
                     if (!response.IsSuccessStatusCode)
                     {
-                        errorMessage = $"Getting book failed: {response.StatusCode}";
+                        errorMessage = $"Getting books failed: {response.StatusCode}";
                         return null;
                     }
 

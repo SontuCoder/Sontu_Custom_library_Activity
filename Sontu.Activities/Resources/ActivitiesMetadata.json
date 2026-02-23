@@ -40,6 +40,14 @@
       "descriptionKey": "Use for get all books details.",
       "categoryKey": "BookFolder",
       "viewModelType": "Sontu.Activities.ViewModels.Book.GetAllBookViewModel"
+    },
+    {
+      "fullName": "Sontu.Activities.Admin.GetAllStudents",
+      "shortName": "GetAllStudetsDetails",
+      "displayNameKey": "Get All Students",
+      "descriptionKey": "Use for get all student details.",
+      "categoryKey": "AdminFolder",
+      "viewModelType": "Sontu.Activities.ViewModels.Admin.GetAllStudentViewModel"
     }
   ]
 }
