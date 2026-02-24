@@ -7,11 +7,12 @@ using System.Net;
 
 namespace Sontu.Activities.Admin
 {
-    public class GetAllStudents : CodeActivity
+    public class GetStudentDetailsById : CodeActivity
     {
         #region Properties
+        public InArgument<string> StudentId { get; set; }
         public OutArgument<string> Error { get; set; }
-        public OutArgument<ListOfStudents> ListOfStudents { get; set; }
+        public OutArgument<StudentDetails> StudentDetails { get; set; }
 
         #endregion
 
@@ -19,27 +20,28 @@ namespace Sontu.Activities.Admin
         protected override void Execute(CodeActivityContext context)
         {
             string errorMessage = null;
+            string studentId = StudentId.Get(context);
 
-            if(!GlobalAuthStore.IsScopeActive)
+            if (!GlobalAuthStore.IsScopeActive)
             {
                 var msg = "Activity must be used inside AuthScope.";
                 Error.Set(context, msg);
-                ListOfStudents.Set(context, null);
+                StudentDetails.Set(context, null);
                 throw new InvalidOperationException(msg);
             }
 
-            ListOfStudents studentsList = GetListOfStudents(out errorMessage);
+            StudentDetails studentDetails = GetStudentDetails(studentId, out errorMessage);
 
-            if (studentsList == null)
+            if (studentDetails == null)
             {
                 Trace.TraceError($"Getting student details failed: {errorMessage}");
                 Error.Set(context, errorMessage);
-                ListOfStudents.Set(context, null);
+                StudentDetails.Set(context, null);
             }
             else
             {
                 Trace.TraceInformation($"Getting student details succeeded.");
-                ListOfStudents.Set(context, studentsList);
+                StudentDetails.Set(context, studentDetails);
                 Error.Set(context, null);
             }
         }
@@ -48,7 +50,7 @@ namespace Sontu.Activities.Admin
 
         #region Private Functions
 
-        private ListOfStudents GetListOfStudents(out string errorMessage)
+        private StudentDetails GetStudentDetails(string studentId, out string errorMessage)
         { 
             errorMessage = null;
             CookieContainer cookieJar = GlobalAuthStore.CookieContainer;
@@ -66,7 +68,7 @@ namespace Sontu.Activities.Admin
                 {
                     var request = new HttpRequestMessage(
                         HttpMethod.Get,
-                        $"{URL_Prefix}/admin/list-student"
+                        $"{URL_Prefix}/admin/student-details/{studentId}"
                     );
 
                     var response = client.SendAsync(request).GetAwaiter().GetResult();
@@ -79,7 +81,7 @@ namespace Sontu.Activities.Admin
 
                     var json = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
 
-                    var students = JsonConvert.DeserializeObject<ListOfStudents>(json);
+                    var students = JsonConvert.DeserializeObject<StudentResponse>(json).Data;
 
                     if (students == null)
                     {

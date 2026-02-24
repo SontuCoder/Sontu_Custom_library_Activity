@@ -17,7 +17,7 @@ using System.Reflection;
     " Auth Activities and Book Activities. Version [1.1.*] -> Admin Activities added." +
     "\r\n\t\t")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.1.1.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.1.1-dev.3+23e8dd2c811f27076b2ab07d5f3029f939c21063")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.1.1-dev.11+3d103e8f1b97a7f9c6695367b43e258e789fea42")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sontu.Activities.Packaging")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sontu.Activities.Packaging")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.1.1.0")]

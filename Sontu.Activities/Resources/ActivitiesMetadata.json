@@ -43,11 +43,35 @@
     },
     {
       "fullName": "Sontu.Activities.Admin.GetAllStudents",
-      "shortName": "GetAllStudetsDetails",
+      "shortName": "GetAllStudentsDetails",
       "displayNameKey": "Get All Students",
       "descriptionKey": "Use for get all student details.",
       "categoryKey": "AdminFolder",
       "viewModelType": "Sontu.Activities.ViewModels.Admin.GetAllStudentViewModel"
+    },
+    {
+      "fullName": "Sontu.Activities.Admin.GetStudentDetailsById",
+      "shortName": "GetStudentDetailsById",
+      "displayNameKey": "Get Student by Id",
+      "descriptionKey": "Use for get student details by Id.",
+      "categoryKey": "AdminFolder",
+      "viewModelType": "Sontu.Activities.ViewModels.Admin.GetStudentDetailsByIdViewModel"
+    },
+    {
+      "fullName": "Sontu.Activities.Admin.AddNewBook",
+      "shortName": "AddNewBook",
+      "displayNameKey": "Add New Book",
+      "descriptionKey": "Use for adding new book.",
+      "categoryKey": "AdminFolder",
+      "viewModelType": "Sontu.Activities.ViewModels.Admin.AddNewBookViewModel"
+    },
+    {
+      "fullName": "Sontu.Activities.Admin.DeleteBook",
+      "shortName": "DeleteBook",
+      "displayNameKey": "Delete Book",
+      "descriptionKey": "Use for deleting existing book.",
+      "categoryKey": "AdminFolder",
+      "viewModelType": "Sontu.Activities.ViewModels.Admin.DeleteBookViewModel"
     }
   ]
 }

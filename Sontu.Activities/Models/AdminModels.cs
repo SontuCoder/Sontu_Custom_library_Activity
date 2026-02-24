@@ -44,7 +44,7 @@ namespace Sontu.Activities.Models
     public class ListOfStudents
     {
         [JsonProperty("total_students")]
-        public int TotalStudents { get; set; }
+        public int? TotalStudents { get; set; }
 
         [JsonProperty("message")]
         public string Message { get; set; }
@@ -53,4 +53,163 @@ namespace Sontu.Activities.Models
         public List<Student> Students { get; set; }
     }
 
+    public class Books
+    {
+
+        [JsonProperty("book_id")]
+        public string BookId { get; set; }
+
+        [JsonProperty("issue_date")]
+        public DateTime? IssuedDate { get; set; }
+
+        [JsonProperty("return_date")]
+        public DateTime? ReturnDate { get; set; }
+
+        [JsonProperty("request_date")]
+        public DateTime? RequestDate { get; set; }
+
+        [JsonProperty("status")]
+        public string BookStatus { get; set; }
+
+        [JsonProperty("book_name")]
+        public string BookName { get; set; }
+
+        [JsonProperty("author")]
+        public string BookAuthor { get; set; }
+
+        [JsonProperty("edition")]
+        public int BookEdition { get; set; }
+
+        [JsonProperty("category")]
+        public List<string> Category { get; set; }
+    }
+    public class StudentDetails
+    {
+        [JsonProperty("stu_email")]
+        public string StudentEmail { get; set; }
+
+        [JsonProperty("stu_name")]
+        public string? StudentName { get; set; }
+
+        [JsonProperty("provider")]
+        public string Provider { get; set; }
+
+        [JsonProperty("books")]
+        public List<Books>? BooksList { get; set; }
+    }
+
+    public class  StudentResponse
+    {
+        [JsonProperty("status")]
+        public string Status { get; set; }
+
+        [JsonProperty("data")]
+        public StudentDetails Data { get; set; }
+
+        [JsonProperty("message")]
+        public string Message { get; set; }
+    }
+
+    public class BookDetails
+    {
+
+        [JsonProperty("_id")]
+        public string BookId { get; set; }
+
+        [JsonProperty("author")]
+        public string BookAuthor { get; set; }
+
+        [JsonProperty("description")]
+        public string BookDescription { get; set; }
+
+        [JsonProperty("title")]
+        public string BookTitle { get; set; }
+
+        [JsonProperty("edition")]
+        public int BookEdition { get; set; }
+
+        [JsonProperty("quantity")]
+        public int BookQuantity { get; set; }
+
+        [JsonProperty("available")]
+        public int BookAvailable { get; set; }
+
+        [JsonProperty("category")]
+        public List<string> Category { get; set; }
+
+        [JsonProperty("added_at")]
+        public DateTime BookAddedAt{ get; set; }
+    }
+
+    public class AddBookResponse
+    {
+        [JsonProperty("status")]
+        public string Status { get; set; }
+
+        [JsonProperty("book")]
+        public BookDetails NewBook { get; set; }
+
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("book_id")]
+        public string ExistingBookId { get; set; }
+
+        [JsonProperty("book_qty")]
+        public int? ExistingBookQuentity { get; set; }
+
+        [JsonProperty("book_avi")]
+        public int? ExistingBookAvi { get; set; }
+    }
+
+    public class DeleteBookResponse
+    {
+        [JsonProperty("status")]
+        public string Status { get; set; }
+
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("book_id")]
+        public string ExistingBookId { get; set; }
+
+        [JsonProperty("book_qty")]
+        public int? ExistingBookQuentity { get; set; }
+
+        [JsonProperty("book_avi")]
+        public int? ExistingBookAvi { get; set; }
+    }
+
+    public class Reqbook
+    {
+        [JsonProperty("id")]
+        public string IssueId { get; set; }
+
+        [JsonProperty("student_email")]
+        public string StudentEmail { get; set; }
+
+        [JsonProperty("book_title")]
+        public string BookTitle { get; set; }
+
+        [JsonProperty("book_author")]
+        public string BookAuthor { get; set; }
+
+        [JsonProperty("issue_date")]
+        public DateTime? IssuedDate { get; set; }
+
+        [JsonProperty("return_date")]
+        public DateTime? ReturnDate { get; set; }
+
+        [JsonProperty("request_date")]
+        public DateTime? RequestedDate { get; set; }
+
+        [JsonProperty("status")]
+        public string IssueStatus { get; set; }
+
+    }
+
+    public class ListOfRequestedBook
+    {
+
+    }
 }

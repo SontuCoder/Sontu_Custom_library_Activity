@@ -45,7 +45,7 @@ namespace Sontu.Activities.Models
         public List<string> Categories { get; set; }
 
         [JsonProperty("edition")]
-        public int Edition { get; set; }
+        public int? Edition { get; set; }
 
         [JsonProperty("book_name")]
         public string BookName { get; set; }
