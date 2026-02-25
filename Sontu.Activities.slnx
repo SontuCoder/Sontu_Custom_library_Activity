@@ -1,5 +1,14 @@
 <Solution>
-  <Project Path="Sontu.Activities.Packaging/Sontu.Activities.Packaging.csproj" />
-  <Project Path="Sontu.Activities.Tests/Sontu.Activities.Tests.csproj" />
-  <Project Path="Sontu.Activities/Sontu.Activities.csproj" />
+  <Project Path="Sontu.Activities.Packaging/Sontu.Activities.Packaging.csproj">
+    <BuildType Solution="Debug|*" Project="Release" />
+    <BuildType Solution="Release|*" Project="Debug" />
+  </Project>
+  <Project Path="Sontu.Activities.Tests/Sontu.Activities.Tests.csproj">
+    <BuildType Solution="Debug|*" Project="Release" />
+    <BuildType Solution="Release|*" Project="Debug" />
+  </Project>
+  <Project Path="Sontu.Activities/Sontu.Activities.csproj">
+    <BuildType Solution="Debug|*" Project="Release" />
+    <BuildType Solution="Release|*" Project="Debug" />
+  </Project>
 </Solution>

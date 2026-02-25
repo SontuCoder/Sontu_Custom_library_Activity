@@ -158,13 +158,16 @@ namespace Sontu.Activities.Admin
                     request.Content = content;
                     var response = client.SendAsync(request).GetAwaiter().GetResult();
 
-                    if (!response.IsSuccessStatusCode)
-                    {
-                        errorMessage = $"Adding new book failed: {response.StatusCode}";
-                        return null;
-                    }
 
                     var json = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+
+                    if (!response.IsSuccessStatusCode)
+                    {
+                        var errorObj = JsonConvert.DeserializeObject<ApiErrorResponse>(json);
+
+                        errorMessage = errorObj?.detail ?? $"Adding new book failed: {response.StatusCode}";
+                        return null;
+                    }
 
                     var newbook = JsonConvert.DeserializeObject<AddBookResponse>(json);
 

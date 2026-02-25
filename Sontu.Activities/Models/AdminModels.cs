@@ -210,6 +210,65 @@ namespace Sontu.Activities.Models
 
     public class ListOfRequestedBook
     {
+        [JsonProperty("total_requests")]
+        public int? TotalRequests { get; set; }
+
+        [JsonProperty("requests")]
+        public List<Reqbook>? Requests { get; set; }
+
+        [JsonProperty("message")]
+        public string Message { get; set; }
+    }
+
+    public class IssuedBookDetails
+    {
+        [JsonProperty("id")]
+        public string IssueId { get; set; }
+        [JsonProperty("student_email")]
+        public string StudentEmail { get; set; }
+        [JsonProperty("book_title")]
+        public string BookTitle { get; set; }
+        [JsonProperty("book_author")]
+        public string BookAuthor { get; set; }
+        [JsonProperty("issue_date")]
+        public DateTime? IssuedDate { get; set; }
+        [JsonProperty("return_date")]
+        public DateTime? RequestedDate { get; set; }
+        [JsonProperty("status")]
+        public string IssueStatus { get; set; }
+    }
+
+    public class ListOfIssuedBooks
+    {
+        [JsonProperty("total_issued_books")]
+        public int? TotalIssuedBooks { get; set; }
+        [JsonProperty("issued_books")]
+        public List<IssuedBookDetails>? IssuedBooks { get; set; }
+        [JsonProperty("message")]
+        public string Message { get; set; }
 
     }
+
+    public enum ApprovalAction
+    {
+        Approved,
+        Rejected
+    }
+
+
+
+    //========================= Common ==========================================
+    public class APIResponse
+    {
+        [JsonProperty("status")]
+        public string Status { get; set; }
+        [JsonProperty("message")]
+        public string Message { get; set; }
+    }
+
+    public class ApiErrorResponse
+    {
+        public string detail { get; set; }
+    }
+
 }

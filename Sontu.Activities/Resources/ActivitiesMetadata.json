@@ -72,6 +72,30 @@
       "descriptionKey": "Use for deleting existing book.",
       "categoryKey": "AdminFolder",
       "viewModelType": "Sontu.Activities.ViewModels.Admin.DeleteBookViewModel"
+    },
+    {
+      "fullName": "Sontu.Activities.Admin.GetAllReqBooks",
+      "shortName": "GetAllReqBooks",
+      "displayNameKey": "Get All Requested Books",
+      "descriptionKey": "Use for getting all requested book.",
+      "categoryKey": "AdminFolder",
+      "viewModelType": "Sontu.Activities.ViewModels.Admin.GetAllReqBooksViewModel"
+    },
+    {
+      "fullName": "Sontu.Activities.Admin.GetAllIssuedBooks",
+      "shortName": "GetAllIssuedBooks",
+      "displayNameKey": "Get All Issued Books",
+      "descriptionKey": "Use for getting all issued book.",
+      "categoryKey": "AdminFolder",
+      "viewModelType": "Sontu.Activities.ViewModels.Admin.GetAllIssuedBooksViewModel"
+    },
+    {
+      "fullName": "Sontu.Activities.Admin.ApproveRequest",
+      "shortName": "ApproveIssue",
+      "displayNameKey": "Approve Issue",
+      "descriptionKey": "Use for taking action on issued book.",
+      "categoryKey": "AdminFolder",
+      "viewModelType": "Sontu.Activities.ViewModels.Admin.ApproveActionViewModel"
     }
   ]
 }
