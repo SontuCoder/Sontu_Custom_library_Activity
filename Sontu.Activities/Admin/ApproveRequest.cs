@@ -105,13 +105,15 @@ namespace Sontu.Activities.Admin
                     request.Content = content;
                     var response = client.SendAsync(request).GetAwaiter().GetResult();
 
+                    var json = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
                     if (!response.IsSuccessStatusCode)
                     {
-                        errorMessage = $"Taking action on Issue failed: {response.StatusCode}";
+                        var errorObj = JsonConvert.DeserializeObject<ApiErrorResponse>(json);
+
+                        errorMessage = errorObj?.detail ?? $"Taking action on Issue failed: {response.StatusCode}";
                         return null;
                     }
 
-                    var json = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
 
                     var approvalRes = JsonConvert.DeserializeObject<APIResponse>(json);
 

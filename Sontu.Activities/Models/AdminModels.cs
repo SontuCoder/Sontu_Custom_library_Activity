@@ -228,6 +228,8 @@ namespace Sontu.Activities.Models
         public string StudentEmail { get; set; }
         [JsonProperty("book_title")]
         public string BookTitle { get; set; }
+        [JsonProperty("book_id")]
+        public string BookId { get; set; }
         [JsonProperty("book_author")]
         public string BookAuthor { get; set; }
         [JsonProperty("issue_date")]
@@ -255,6 +257,29 @@ namespace Sontu.Activities.Models
         Rejected
     }
 
+    public class Admin
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
+        [JsonProperty("name")]
+        public string Name { get; set; }
+        [JsonProperty("email")]
+        public string Email { get; set; }
+        [JsonProperty("provider")]
+        public string Provider { get; set; }
+        [JsonProperty("creaed_at")]
+        public DateTime? CreatedAt { get; set; }
+    }
+
+    public class AllAdmins
+    {
+        [JsonProperty("status")]
+        public string Status { get; set; }
+        [JsonProperty("admins")]
+        public List<Admin>? Admins { get; set; }
+        [JsonProperty("message")]
+        public string Message { get; set; }
+    }
 
 
     //========================= Common ==========================================

@@ -7,12 +7,11 @@ using System.Net;
 
 namespace Sontu.Activities.Admin
 {
-    public class GetStudentDetailsById : CodeActivity
+    public class GetAllAdmins : CodeActivity
     {
         #region Properties
-        public InArgument<string> StudentId { get; set; }
         public OutArgument<string> Error { get; set; }
-        public OutArgument<StudentDetails> StudentDetails { get; set; }
+        public OutArgument<AllAdmins> ListOfAdmins { get; set; }
 
         #endregion
 
@@ -20,28 +19,27 @@ namespace Sontu.Activities.Admin
         protected override void Execute(CodeActivityContext context)
         {
             string errorMessage = null;
-            string studentId = StudentId.Get(context);
 
-            if (!GlobalAuthStore.IsScopeActive)
+            if(!GlobalAuthStore.IsScopeActive)
             {
                 var msg = "Activity must be used inside AuthScope.";
                 Error.Set(context, msg);
-                StudentDetails.Set(context, null);
+                ListOfAdmins.Set(context, null);
                 throw new InvalidOperationException(msg);
             }
 
-            StudentDetails studentDetails = GetStudentDetails(studentId, out errorMessage);
+            AllAdmins allAdmins = GetListOfAdmins(out errorMessage);
 
-            if (studentDetails == null)
+            if (allAdmins == null)
             {
-                Trace.TraceError($"Getting student details failed: {errorMessage}");
+                Trace.TraceError($"Getting admins details failed: {errorMessage}");
                 Error.Set(context, errorMessage);
-                StudentDetails.Set(context, null);
+                ListOfAdmins.Set(context, null);
             }
             else
             {
-                Trace.TraceInformation($"Getting student details succeeded.");
-                StudentDetails.Set(context, studentDetails);
+                Trace.TraceInformation($"Getting admins details succeeded.");
+                ListOfAdmins.Set(context, allAdmins);
                 Error.Set(context, null);
             }
         }
@@ -50,7 +48,7 @@ namespace Sontu.Activities.Admin
 
         #region Private Functions
 
-        private StudentDetails GetStudentDetails(string studentId, out string errorMessage)
+        private AllAdmins GetListOfAdmins(out string errorMessage)
         { 
             errorMessage = null;
             CookieContainer cookieJar = GlobalAuthStore.CookieContainer;
@@ -68,7 +66,7 @@ namespace Sontu.Activities.Admin
                 {
                     var request = new HttpRequestMessage(
                         HttpMethod.Get,
-                        $"{URL_Prefix}/admin/student-details/{studentId}"
+                        $"{URL_Prefix}/admin/get-all-admins"
                     );
 
                     var response = client.SendAsync(request).GetAwaiter().GetResult();
@@ -78,18 +76,18 @@ namespace Sontu.Activities.Admin
                     {
                         var errorObj = JsonConvert.DeserializeObject<ApiErrorResponse>(json);
 
-                        errorMessage = errorObj?.detail ?? $"Getting students failed: {response.StatusCode}";
+                        errorMessage = errorObj?.detail ?? $"Getting admins details failed: {response.StatusCode}";
                         return null;
                     }
 
-                    var students = JsonConvert.DeserializeObject<StudentResponse>(json).Data;
+                    var allAdmins = JsonConvert.DeserializeObject<AllAdmins>(json);
 
-                    if (students == null)
+                    if (allAdmins == null)
                     {
-                        errorMessage = "Invalid student response.";
+                        errorMessage = "Invalid API response.";
                         return null;
                     }
-                    return students;
+                    return allAdmins;
                 }
             }
             catch (Exception ex)

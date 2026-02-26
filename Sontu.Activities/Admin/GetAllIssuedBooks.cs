@@ -71,13 +71,15 @@ namespace Sontu.Activities.Admin
 
                     var response = client.SendAsync(request).GetAwaiter().GetResult();
 
+                    var json = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
                     if (!response.IsSuccessStatusCode)
                     {
-                        errorMessage = $"Getting issued books failed: {response.StatusCode}";
+                        var errorObj = JsonConvert.DeserializeObject<ApiErrorResponse>(json);
+
+                        errorMessage = errorObj?.detail ?? $"Getting issued books failed: {response.StatusCode}";
                         return null;
                     }
 
-                    var json = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
 
                     var issuedBooks = JsonConvert.DeserializeObject<ListOfIssuedBooks>(json);
 

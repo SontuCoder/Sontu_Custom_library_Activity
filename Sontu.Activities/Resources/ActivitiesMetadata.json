@@ -96,6 +96,15 @@
       "descriptionKey": "Use for taking action on issued book.",
       "categoryKey": "AdminFolder",
       "viewModelType": "Sontu.Activities.ViewModels.Admin.ApproveActionViewModel"
+    },
+    {
+      "fullName": "Sontu.Activities.Admin.EditBookDetails",
+      "shortName": "EditBookDetails",
+      "displayNameKey": "Edit Book Details",
+      "descriptionKey": "Use for edit details for existing books.",
+      "categoryKey": "AdminFolder",
+      "viewModelType": "Sontu.Activities.ViewModels.Admin.EditBookDetailsViewModel"
     }
   ]
 }
+
