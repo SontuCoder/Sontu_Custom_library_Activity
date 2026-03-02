@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Sontu.Activities.Helpers;
+using Sontu.Activities.Models;
 using System.Activities;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -77,13 +78,16 @@ namespace Sontu.Activities.Auth
 
                     var response = client.SendAsync(request).GetAwaiter().GetResult();
 
+                    var json = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+
                     if (!response.IsSuccessStatusCode)
                     {
-                        errorMessage = $"Refresh token failed: {response.StatusCode}";
+                        var errorObj = JsonConvert.DeserializeObject<ApiErrorResponse>(json);
+
+                        errorMessage = errorObj?.detail ?? $"Refresh token failed: {response.StatusCode}";
                         return null;
                     }
 
-                    var json = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
                 }
                 return cookieJar;
             }

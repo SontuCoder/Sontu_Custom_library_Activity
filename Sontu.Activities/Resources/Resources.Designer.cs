@@ -97,6 +97,15 @@ namespace Sontu.Activities {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sontu.Library.Student.
+        /// </summary>
+        public static string StudentFolder {
+            get {
+                return ResourceManager.GetString("StudentFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to http://127.0.0.1:8000.
         /// </summary>
         public static string URL_Prefix {

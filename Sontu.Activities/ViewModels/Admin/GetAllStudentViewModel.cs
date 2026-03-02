@@ -3,7 +3,7 @@ using System.Activities.DesignViewModels;
 
 namespace Sontu.Activities.ViewModels.Admin
 {
-    public class GetAllStudentViewModel : DesignPropertiesViewModel
+    public class RequestBookViewModel : DesignPropertiesViewModel
     {
 
         #region Design Properties
@@ -14,7 +14,7 @@ namespace Sontu.Activities.ViewModels.Admin
 
         #endregion
 
-        public GetAllStudentViewModel(IDesignServices services) : base(services)
+        public RequestBookViewModel(IDesignServices services) : base(services)
         {
         }
 

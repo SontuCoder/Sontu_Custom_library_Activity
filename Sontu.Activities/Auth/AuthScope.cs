@@ -1,4 +1,6 @@
-﻿using Sontu.Activities.Helpers;
+﻿using Newtonsoft.Json;
+using Sontu.Activities.Helpers;
+using Sontu.Activities.Models;
 using System.Activities;
 using System.ComponentModel;
 using System.Net;
@@ -109,9 +111,13 @@ namespace Sontu.Activities.Auth
 
                     var response = client.SendAsync(request).GetAwaiter().GetResult();
 
+                    var json = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+
                     if (!response.IsSuccessStatusCode)
                     {
-                        errorMessage = $"Authentication failed: {response.StatusCode}";
+                        var errorObj = JsonConvert.DeserializeObject<ApiErrorResponse>(json);
+
+                        errorMessage = errorObj?.detail ?? $"Authentication failed: {response.StatusCode}";
                         return null;
                     }
 

@@ -4,7 +4,7 @@
     {
       "fullName": "Sontu.Activities.Auth.AuthScope",
       "shortName": "AuthScope",
-      "displayNameKey": "Auth Scope Name",
+      "displayNameKey": "Auth Scope",
       "descriptionKey": "Get Auth cookies",
       "categoryKey": "AuthFolder",
       "viewModelType": "Sontu.Activities.ViewModels.Auth.AuthViewModel"
@@ -104,6 +104,46 @@
       "descriptionKey": "Use for edit details for existing books.",
       "categoryKey": "AdminFolder",
       "viewModelType": "Sontu.Activities.ViewModels.Admin.EditBookDetailsViewModel"
+    },
+    {
+      "fullName": "Sontu.Activities.Admin.GetAllAdmins",
+      "shortName": "GetAllAdmins",
+      "displayNameKey": "Get All Admins",
+      "descriptionKey": "Use for get admins details.",
+      "categoryKey": "AdminFolder",
+      "viewModelType": "Sontu.Activities.ViewModels.Admin.GetAllAdminsViewModel"
+    },
+    {
+      "fullName": "Sontu.Activities.Admin.ApproveRenewBooks",
+      "shortName": "ApproveRenewBooks",
+      "displayNameKey": "Renew Issued Book",
+      "descriptionKey": "Use for renew book.",
+      "categoryKey": "AdminFolder",
+      "viewModelType": "Sontu.Activities.ViewModels.Admin.ApproveRenewBooksViewModel"
+    },
+    {
+      "fullName": "Sontu.Activities.Admin.ApproveReturnBook",
+      "shortName": "ApproveReturnBook",
+      "displayNameKey": "Return Issued Book",
+      "descriptionKey": "Use for return book.",
+      "categoryKey": "AdminFolder",
+      "viewModelType": "Sontu.Activities.ViewModels.Admin.ApproveReturnBookViewModel"
+    },
+    {
+      "fullName": "Sontu.Activities.Admin.GetAllRenewReturnReqBooks",
+      "shortName": "GetAllRenewOrReturnReqBooks",
+      "displayNameKey": "Get All Renew Or Return Requeted Books",
+      "descriptionKey": "Use for get all renew or return books.",
+      "categoryKey": "AdminFolder",
+      "viewModelType": "Sontu.Activities.ViewModels.Admin.GetAllRenewReturnReqBooksViewModel"
+    },
+    {
+      "fullName": "Sontu.Activities.Student.RequestBook",
+      "shortName": "RequestBook",
+      "displayNameKey": "Request Book",
+      "descriptionKey": "Use for reqest book.",
+      "categoryKey": "StudentFolder",
+      "viewModelType": "Sontu.Activities.ViewModels.Student.RequestBookViewModel"
     }
   ]
 }

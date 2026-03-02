@@ -77,13 +77,15 @@ namespace Sontu.Activities.Auth
 
                     var response = client.SendAsync(request).GetAwaiter().GetResult();
 
+                    var json = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+
                     if (!response.IsSuccessStatusCode)
                     {
-                        errorMessage = $"Getting user failed: {response.StatusCode}";
+                        var errorObj = JsonConvert.DeserializeObject<ApiErrorResponse>(json);
+
+                        errorMessage = errorObj?.detail ?? $"Getting user failed: {response.StatusCode}";
                         return null;
                     }
-
-                    var json = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
 
                     var user = JsonConvert.DeserializeObject<AuthUserResponse>(json);
 

@@ -235,7 +235,7 @@ namespace Sontu.Activities.Models
         [JsonProperty("issue_date")]
         public DateTime? IssuedDate { get; set; }
         [JsonProperty("return_date")]
-        public DateTime? RequestedDate { get; set; }
+        public DateTime? ReturnDate { get; set; }
         [JsonProperty("status")]
         public string IssueStatus { get; set; }
     }
@@ -279,6 +279,44 @@ namespace Sontu.Activities.Models
         public List<Admin>? Admins { get; set; }
         [JsonProperty("message")]
         public string Message { get; set; }
+    }
+
+    public enum RequestOptions
+    {
+        Renew,
+        Return
+    }
+
+    public class ReqBookDetails
+    {
+        [JsonProperty("id")]
+        public string IssueId { get; set; }
+        [JsonProperty("student_email")]
+        public string StudentEmail { get; set; }
+        [JsonProperty("book_title")]
+        public string BookTitle { get; set; }
+        [JsonProperty("book_id")]
+        public string BookId { get; set; }
+        [JsonProperty("book_author")]
+        public string BookAuthor { get; set; }
+        [JsonProperty("issue_date")]
+        public DateTime? IssuedDate { get; set; }
+        [JsonProperty("return_date")]
+        public DateTime? ReturnDate { get; set; }
+        [JsonProperty("request_date")]
+        public DateTime? RequestedDate { get; set; }
+        [JsonProperty("status")]
+        public string BookStatus { get; set; }
+    }
+
+    public class RequestBookResponse
+    {
+        [JsonProperty("total_requests")]
+        public int? TotalRequest { get; set; }
+        [JsonProperty("message")]
+        public string Message { get; set; }
+        [JsonProperty("request_details")]
+        public List<ReqBookDetails>? BookDetails { get; set; }
     }
 
 

@@ -134,4 +134,7 @@
     <value>http://127.0.0.1:8000</value>
     <comment>URL prefix</comment>
   </data>
+  <data name="StudentFolder" xml:space="preserve">
+    <value>Sontu.Library.Student</value>
+  </data>
 </root>
