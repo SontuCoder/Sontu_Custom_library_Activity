@@ -144,6 +144,14 @@
       "descriptionKey": "Use for reqest book.",
       "categoryKey": "StudentFolder",
       "viewModelType": "Sontu.Activities.ViewModels.Student.RequestBookViewModel"
+    },
+    {
+      "fullName": "Sontu.Activities.Student.GetAllRequests",
+      "shortName": "GetAllRequests",
+      "displayNameKey": "Get All Requests",
+      "descriptionKey": "Use for getting all requests of current student.",
+      "categoryKey": "StudentFolder",
+      "viewModelType": "Sontu.Activities.ViewModels.Student.GetAllRequestsViewModel"
     }
   ]
 }
