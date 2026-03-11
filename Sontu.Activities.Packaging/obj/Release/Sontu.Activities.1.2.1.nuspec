@@ -5,9 +5,9 @@
     <version>1.2.1</version>
     <authors>Sontu</authors>
     <iconUrl>https://github.com/SontuCoder/Expense-Tracker/blob/main/img/image copy 8.png?raw=true</iconUrl>
-    <description>UiPath custom activities to integrat Sontu Library. Version [1.0.*] has only Auth Activities and Book Activities. Version [1.1.*] -&gt; Admin Activities added. Version [1.2.*] -&gt; Student Activities added.</description>
+    <description>UiPath custom activities to integrat Sontu Library. Must use Version [1.2.1] or above of Sontu Library to work properly.</description>
     <tags>UiPath Activities for Sontu Library</tags>
-    <repository type="git" commit="7a867435d481cb5c5b4fafa5b4f964a72039053b" />
+    <repository type="git" commit="43a23a9332b5578a45ee2d4383d451bf14559ea3" />
     <dependencies>
       <group targetFramework="net6.0" />
     </dependencies>

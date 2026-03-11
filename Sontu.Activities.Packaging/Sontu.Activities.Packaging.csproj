@@ -17,7 +17,7 @@
 		<VersionPrefix Condition="'$(Configuration)' == 'Debug'">1.0.$(VersionBuild)-dev.$(VersionRevision)</VersionPrefix>-->
 		<Authors>Sontu</Authors>
 		<Description>
-			UiPath custom activities to integrat Sontu Library. Version [1.0.*] has only Auth Activities and Book Activities. Version [1.1.*] -&gt; Admin Activities added. Version [1.2.*] -&gt; Student Activities added.
+			UiPath custom activities to integrat Sontu Library. Must use Version [1.2.1] or above of Sontu Library to work properly.
 		</Description>
 		<PackageTags>UiPath Activities for Sontu Library</PackageTags>
 		<Product>Sontu.Activities.Packaging</Product>
