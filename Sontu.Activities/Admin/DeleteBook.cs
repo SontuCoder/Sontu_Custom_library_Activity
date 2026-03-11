@@ -72,7 +72,8 @@ namespace Sontu.Activities.Admin
         private DeleteBookResponse DeleteBookMethod(string bookId, int quantity, out string errorMessage)
         { 
             errorMessage = null;
-            CookieContainer cookieJar = GlobalAuthStore.CookieContainer;
+            string userEmail = GlobalAuthStore.UserEmail;
+            GlobalAuthStore.CookieContainer.TryGetValue(userEmail.ToLower(), out var cookieJar);
             var URL_Prefix = Resources.URL_Prefix;
 
             try

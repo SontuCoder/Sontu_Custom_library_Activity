@@ -1,6 +1,3 @@
-C:\Users\SubhadipMaity\OneDrive - Centelli\Desktop\Study\Custom Library\Sontu.Activities\Sontu.Activities\bin\Debug\net6.0\Sontu.Activities.deps.json
-C:\Users\SubhadipMaity\OneDrive - Centelli\Desktop\Study\Custom Library\Sontu.Activities\Sontu.Activities\bin\Debug\net6.0\Sontu.Activities.dll
-C:\Users\SubhadipMaity\OneDrive - Centelli\Desktop\Study\Custom Library\Sontu.Activities\Sontu.Activities\bin\Debug\net6.0\Sontu.Activities.pdb
 C:\Users\SubhadipMaity\OneDrive - Centelli\Desktop\Study\Custom Library\Sontu.Activities\Sontu.Activities\obj\Debug\net6.0\Sontu.Activities.csproj.AssemblyReference.cache
 C:\Users\SubhadipMaity\OneDrive - Centelli\Desktop\Study\Custom Library\Sontu.Activities\Sontu.Activities\obj\Debug\net6.0\Sontu.Activities.Resources.Resources.resources
 C:\Users\SubhadipMaity\OneDrive - Centelli\Desktop\Study\Custom Library\Sontu.Activities\Sontu.Activities\obj\Debug\net6.0\Sontu.Activities.csproj.GenerateResource.cache
@@ -9,7 +6,3 @@ C:\Users\SubhadipMaity\OneDrive - Centelli\Desktop\Study\Custom Library\Sontu.Ac
 C:\Users\SubhadipMaity\OneDrive - Centelli\Desktop\Study\Custom Library\Sontu.Activities\Sontu.Activities\obj\Debug\net6.0\Sontu.Activities.AssemblyInfo.cs
 C:\Users\SubhadipMaity\OneDrive - Centelli\Desktop\Study\Custom Library\Sontu.Activities\Sontu.Activities\obj\Debug\net6.0\Sontu.Activities.csproj.CoreCompileInputs.cache
 C:\Users\SubhadipMaity\OneDrive - Centelli\Desktop\Study\Custom Library\Sontu.Activities\Sontu.Activities\obj\Debug\net6.0\Sontu.Activities.sourcelink.json
-C:\Users\SubhadipMaity\OneDrive - Centelli\Desktop\Study\Custom Library\Sontu.Activities\Sontu.Activities\obj\Debug\net6.0\Sontu.Activities.dll
-C:\Users\SubhadipMaity\OneDrive - Centelli\Desktop\Study\Custom Library\Sontu.Activities\Sontu.Activities\obj\Debug\net6.0\refint\Sontu.Activities.dll
-C:\Users\SubhadipMaity\OneDrive - Centelli\Desktop\Study\Custom Library\Sontu.Activities\Sontu.Activities\obj\Debug\net6.0\Sontu.Activities.pdb
-C:\Users\SubhadipMaity\OneDrive - Centelli\Desktop\Study\Custom Library\Sontu.Activities\Sontu.Activities\obj\Debug\net6.0\ref\Sontu.Activities.dll

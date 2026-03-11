@@ -39,21 +39,28 @@ namespace Sontu.Activities.Auth
                 Error.Set(context, errorMessage);
                 throw new InvalidOperationException(errorMessage);
             }
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                errorMessage = "Email is required for authentication.";
+                Error.Set(context, errorMessage);
+                throw new InvalidOperationException(errorMessage);
+            }
 
-            if(GlobalAuthStore.CookieContainer == null || GlobalAuthStore.UserEmail == null)
+            if (!GlobalAuthStore.CookieContainer.TryGetValue(email.ToLower(), out var cookieJar))
             {
                 errorMessage = "First run auth scope.";
                 Error.Set(context, errorMessage);
                 throw new InvalidOperationException(errorMessage);
             }
 
-            if (email != GlobalAuthStore.UserEmail || !ReferenceEquals(cookies, GlobalAuthStore.CookieContainer))
+            if (!ReferenceEquals(cookies, GlobalAuthStore.CookieContainer[email.ToLower()]))
             {
                 errorMessage = "User details do not match the active session.";
                 Error.Set(context, errorMessage);
                 throw new InvalidOperationException(errorMessage);
             }
 
+            GlobalAuthStore.UserEmail = email;
             Error.Set(context, null);
             GlobalAuthStore.IsScopeActive = true;
 
@@ -68,6 +75,7 @@ namespace Sontu.Activities.Auth
         private void OnBodyCompleted( NativeActivityContext context, ActivityInstance completedInstance)
         {
             GlobalAuthStore.IsScopeActive = false;
+            GlobalAuthStore.UserEmail = null;
         }
 
         #endregion

@@ -66,7 +66,7 @@ namespace Sontu.Activities.Auth
 
             if (cookieJar != null)
             {
-                GlobalAuthStore.CookieContainer = cookieJar;
+                GlobalAuthStore.CookieContainer[email.ToLower()] = cookieJar;
                 GlobalAuthStore.IsScopeActive = true;
                 GlobalAuthStore.UserEmail = email;
             }
@@ -145,6 +145,7 @@ namespace Sontu.Activities.Auth
         private void OnBodyCompleted( NativeActivityContext context, ActivityInstance completedInstance)
         {
             GlobalAuthStore.IsScopeActive = false;
+            GlobalAuthStore.UserEmail = null;
         }
 
         #endregion

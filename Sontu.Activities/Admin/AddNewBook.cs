@@ -124,7 +124,8 @@ namespace Sontu.Activities.Admin
         private AddBookResponse AddBook(string title, string author, string description, List<string> categories, int edition, int quantity, out string errorMessage)
         { 
             errorMessage = null;
-            CookieContainer cookieJar = GlobalAuthStore.CookieContainer;
+            string userEmail = GlobalAuthStore.UserEmail;
+            GlobalAuthStore.CookieContainer.TryGetValue(userEmail.ToLower(), out var cookieJar);
             var URL_Prefix = Resources.URL_Prefix;
 
             try

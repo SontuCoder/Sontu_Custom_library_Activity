@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Sontu.Activities</id>
+    <version>1.2.2</version>
+    <authors>Sontu</authors>
+    <iconUrl>https://github.com/SontuCoder/Expense-Tracker/blob/main/img/image copy 8.png?raw=true</iconUrl>
+    <description>UiPath custom activities to integrat Sontu Library. Must use Version [1.3.0] or above of Sontu Library to work properly.</description>
+    <tags>UiPath Activities for Sontu Library</tags>
+    <repository type="git" commit="1a11ee914d746031571ec0d794c87a869c85d02e" />
+    <dependencies>
+      <group targetFramework="net6.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\net6.0\Sontu.Activities.dll" target="lib\net6.0\Sontu.Activities.dll" />
+  </files>
+</package>

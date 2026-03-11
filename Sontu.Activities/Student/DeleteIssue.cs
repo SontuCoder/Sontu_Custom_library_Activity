@@ -77,7 +77,8 @@ namespace Sontu.Activities.Student
         private APIResponse DeletIssue(string issueId, string action, out string errorMessage)
         { 
             errorMessage = null;
-            CookieContainer cookieJar = GlobalAuthStore.CookieContainer;
+            string userEmail = GlobalAuthStore.UserEmail;
+            GlobalAuthStore.CookieContainer.TryGetValue(userEmail.ToLower(), out var cookieJar);
             var URL_Prefix = Resources.URL_Prefix;
             if (action == StudentRequestFilter.Request.ToString())
             {

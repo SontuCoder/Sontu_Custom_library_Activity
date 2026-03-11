@@ -48,7 +48,8 @@ namespace Sontu.Activities.Auth
                 Trace.TraceInformation($"Refresh token succeeded.");
                 NewCookie.Set(context, newCookie);
                 Error.Set(context, null);
-                GlobalAuthStore.CookieContainer = newCookie;
+                string userEmail = GlobalAuthStore.UserEmail;
+                GlobalAuthStore.CookieContainer[userEmail] = newCookie;
             }
         }
 
@@ -59,7 +60,8 @@ namespace Sontu.Activities.Auth
         private CookieContainer RefreshTokenCall(out string errorMessage)
         { 
             errorMessage = null;
-            CookieContainer cookieJar = GlobalAuthStore.CookieContainer;
+            string userEmail = GlobalAuthStore.UserEmail;
+            GlobalAuthStore.CookieContainer.TryGetValue(userEmail.ToLower(), out var cookieJar);
             var URL_Prefix = Resources.URL_Prefix;
 
             try

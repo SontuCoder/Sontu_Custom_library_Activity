@@ -25,7 +25,6 @@ namespace Sontu.Activities.Auth
         protected override void Execute(CodeActivityContext context)
         {
             string errorMessage = null;
-            AuthUserResponse userDate = null;
 
             if(!GlobalAuthStore.IsScopeActive)
             {
@@ -35,7 +34,7 @@ namespace Sontu.Activities.Auth
                 throw new InvalidOperationException(msg);
             }
 
-            userDate = GetUser(out errorMessage);
+            AuthUserResponse userDate = GetUser(out errorMessage);
 
             if (userDate == null)
             {
@@ -58,7 +57,8 @@ namespace Sontu.Activities.Auth
         private AuthUserResponse GetUser(out string errorMessage)
         { 
             errorMessage = null;
-            CookieContainer cookieJar = GlobalAuthStore.CookieContainer;
+            string userEmail = GlobalAuthStore.UserEmail;
+            GlobalAuthStore.CookieContainer.TryGetValue(userEmail.ToLower(), out var cookieJar);
             var URL_Prefix = Resources.URL_Prefix;
 
             try
