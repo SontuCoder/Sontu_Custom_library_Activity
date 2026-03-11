@@ -7,7 +7,7 @@ namespace Sontu.Activities.Models
     public class StudentRequest
     {
         [JsonProperty("_id")]
-        public string RequestId { get; set; }
+        public string IssuedId { get; set; }
         [JsonProperty("email")]
         public string Email { get; set; }
         [JsonProperty("book_id")]
@@ -28,6 +28,8 @@ namespace Sontu.Activities.Models
         public string Author { get; set; }
         [JsonProperty("edition")]
         public int Edition { get; set; }
+        [JsonProperty("category")]
+        public List<string>? Categories { get; set; }
     }
 
     public class ListOfStudentRequests
@@ -39,6 +41,24 @@ namespace Sontu.Activities.Models
         public List<StudentRequest> ListOfRequests { get; set; }
     }
 
+    public enum StudentRequestStatus
+    {
+        Issued,
+        All,
+        Returned,
+    }
+    public enum StudentRequestAction
+    {
+        Return,
+        Renew
+    }
+
+    public enum StudentRequestFilter
+    {
+        Request,
+        Return,
+        Renew
+    }
 
     // ================== Common Models =================
 

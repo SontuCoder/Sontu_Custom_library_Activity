@@ -14,6 +14,7 @@ namespace Sontu.Activities.Student
     {
 
         #region Properties
+        public InArgument<StudentRequestStatus> RequestStatus { get; set; }
         public OutArgument<string> Error { get; set; }
         public OutArgument<ListOfStudentRequests> AllRequests { get; set; }
 
@@ -24,6 +25,7 @@ namespace Sontu.Activities.Student
         {
             string errorMessage = null;
 
+
             if (!GlobalAuthStore.IsScopeActive)
             {
                 var msg = "Activity must be used inside AuthScope.";
@@ -32,7 +34,19 @@ namespace Sontu.Activities.Student
                 throw new InvalidOperationException(msg);
             }
 
-            ListOfStudentRequests apiDate = AllRequestsBooks(out errorMessage);
+            // Input validation
+            if (RequestStatus.Get(context) != StudentRequestStatus.All && RequestStatus.Get(context) != StudentRequestStatus.Issued && RequestStatus.Get(context) != StudentRequestStatus.Returned)
+            {
+                var msg = "Invalid RequestStatus. Please provide a valid status.";
+                Error.Set(context, msg);
+                AllRequests.Set(context, null);
+                throw new ArgumentException(msg, nameof(RequestStatus));
+            }
+
+            var status = RequestStatus.Get(context);
+            var statusStr = status.ToString();
+
+            ListOfStudentRequests apiDate = AllRequestsBooks(statusStr, out errorMessage);
 
             if (apiDate == null)
             {
@@ -52,53 +66,62 @@ namespace Sontu.Activities.Student
 
         #region Private Authentication
 
-        private ListOfStudentRequests AllRequestsBooks(out string errorMessage)
+        private ListOfStudentRequests AllRequestsBooks(string status, out string errorMessage)
         { 
             errorMessage = null;
             CookieContainer cookieJar = GlobalAuthStore.CookieContainer;
             var URL_Prefix = Resources.URL_Prefix;
-
-            try
+            if(status.ToLower() == "issued")
             {
-                var handler = new HttpClientHandler
+                URL_Prefix += "/student/issued-books";
+            } else if(status.ToLower() == "all") {
+                URL_Prefix += "/student/my-requests";
+            } else
+            {
+                URL_Prefix += "/student/list-return-request";
+            }
+
+                try
                 {
-                    CookieContainer = cookieJar
-                };
-
-                using (var client = new HttpClient(handler))
-                {
-                    var request = new HttpRequestMessage(
-                        HttpMethod.Get,
-                        $"{URL_Prefix}/student/my-requests"
-                    );
-
-                    var response = client.SendAsync(request).GetAwaiter().GetResult();
-
-                    var json = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
-
-                    if (!response.IsSuccessStatusCode)
+                    var handler = new HttpClientHandler
                     {
-                        var errorObj = JsonConvert.DeserializeObject<ApiErrorResponse>(json);
+                        CookieContainer = cookieJar
+                    };
 
-                        errorMessage = errorObj?.detail ?? $"Get all requests failed: {response.StatusCode}";
-                        return null;
-                    }
-
-                    var bookRes = JsonConvert.DeserializeObject<ListOfStudentRequests>(json);
-
-                    if (bookRes == null)
+                    using (var client = new HttpClient(handler))
                     {
-                        errorMessage = "Invalid API response.";
-                        return null;
+                        var request = new HttpRequestMessage(
+                            HttpMethod.Get,
+                            $"{URL_Prefix}"
+                        );
+
+                        var response = client.SendAsync(request).GetAwaiter().GetResult();
+
+                        var json = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+
+                        if (!response.IsSuccessStatusCode)
+                        {
+                            var errorObj = JsonConvert.DeserializeObject<ApiErrorResponse>(json);
+
+                            errorMessage = errorObj?.detail ?? $"Get all requests failed: {response.StatusCode}";
+                            return null;
+                        }
+
+                        var bookRes = JsonConvert.DeserializeObject<ListOfStudentRequests>(json);
+
+                        if (bookRes == null)
+                        {
+                            errorMessage = "Invalid API response.";
+                            return null;
+                        }
+                        return bookRes;
                     }
-                    return bookRes;
                 }
-            }
-            catch (Exception ex)
-            {
-                errorMessage = ex.Message;
-                return null;
-            }
+                catch (Exception ex)
+                {
+                    errorMessage = ex.Message;
+                    return null;
+                }
         }
 
         #endregion

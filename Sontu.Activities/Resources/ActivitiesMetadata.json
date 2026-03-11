@@ -152,6 +152,22 @@
       "descriptionKey": "Use for getting all requests of current student.",
       "categoryKey": "StudentFolder",
       "viewModelType": "Sontu.Activities.ViewModels.Student.GetAllRequestsViewModel"
+    },
+    {
+      "fullName": "Sontu.Activities.Student.DeleteIssue",
+      "shortName": "DeleteIssue",
+      "displayNameKey": "Delete Issue",
+      "descriptionKey": "Use for delete requested, renew, return issue of current student.",
+      "categoryKey": "StudentFolder",
+      "viewModelType": "Sontu.Activities.ViewModels.Student.DeleteIssueViewModel"
+    },
+    {
+      "fullName": "Sontu.Activities.Student.BookReturnRenewRequest",
+      "shortName": "BookReturnRenewRequest",
+      "displayNameKey": "Book Return Or Renew Request",
+      "descriptionKey": "Use for return or renew request.",
+      "categoryKey": "StudentFolder",
+      "viewModelType": "Sontu.Activities.ViewModels.Student.BookReturnRenewRequestViewModel"
     }
   ]
 }

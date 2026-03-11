@@ -8,6 +8,7 @@ namespace Sontu.Activities.ViewModels.Student
 
         #region Design Properties
 
+        public DesignInArgument<StudentRequestStatus> RequestStatus { get; set; }
         public DesignOutArgument<ListOfStudentRequests> AllRequests { get; set; }
         public DesignOutArgument<string> Error { get; set; }
 
@@ -26,12 +27,18 @@ namespace Sontu.Activities.ViewModels.Student
             Error.DisplayName = "Error";
             Error.Tooltip = "The error message.";
             Error.IsPrincipal = false;
-            Error.OrderIndex = 0;
+            Error.OrderIndex = 1;
 
             AllRequests.DisplayName = "AllRequests";
             AllRequests.Tooltip = "Api response for getting all requests of current student.";
-            AllRequests.IsPrincipal = true;
+            AllRequests.IsPrincipal = false;
             AllRequests.OrderIndex = 0;
+
+            RequestStatus.DisplayName = "RequestStatus";
+            RequestStatus.Tooltip = "The status of the requests to retrieve. Valid values are 'All' or 'Issued'.";
+            RequestStatus.IsPrincipal = true;
+            RequestStatus.OrderIndex = 1;
+            RequestStatus.IsRequired = true;
 
 
         }

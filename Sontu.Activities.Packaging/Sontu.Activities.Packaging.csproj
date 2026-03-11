@@ -11,8 +11,8 @@
 		<VersionBuild>$([System.DateTime]::UtcNow.DayOfYear.ToString("F0"))</VersionBuild>
 		<VersionRevision>$([System.DateTime]::UtcNow.TimeOfDay.TotalMinutes.ToString("F0"))</VersionRevision>
 		<PackageId>Sontu.Activities</PackageId>
-		<!-- <VersionPrefix>1.1.1</VersionPrefix> -->
-		<VersionPrefix>1.2.1-dev-1</VersionPrefix>
+		<VersionPrefix>1.2.1</VersionPrefix>
+		<!--<VersionPrefix>1.2.1-dev-8</VersionPrefix> -->
 		<!--<VersionPrefix Condition="'$(Configuration)' == 'Release'">1.0.0</VersionPrefix>
 		<VersionPrefix Condition="'$(Configuration)' == 'Debug'">1.0.$(VersionBuild)-dev.$(VersionRevision)</VersionPrefix>-->
 		<Authors>Sontu</Authors>
