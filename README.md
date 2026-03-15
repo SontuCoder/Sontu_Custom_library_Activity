@@ -269,14 +269,6 @@ The documentation covers:
 
 ---
 
-## 🖼️ Preview
-
-| Cover Page | Table of Contents |
-|---|---|
-| ![Page 1](page_1.png) | ![Page 2](page_2.png) |
-
----
-
 ## 👤 Author
 
 **Subhadip**
@@ -288,6 +280,6 @@ The documentation covers:
 
 <div align="center">
 
-Made with ❤️ by Subhadip &nbsp;|&nbsp; Internship Project 2026
+Made with ❤️ by Subhadip
 
 </div>
