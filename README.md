@@ -257,7 +257,7 @@ All activities follow this consistent pattern, making error handling in workflow
 
 Full book-style PDF documentation is available:
 
-📥 **[Download Sontu_Activities_Documentation.pdf](./Sontu_Activities_Documentation.pdf)**
+📥 **[Download Sontu_Activities_Documentation.pdf]([./Sontu_Activities_Documentation.pdf](https://drive.google.com/file/d/1LpjtnoehT04QtEyACVEwlAx12b0xNd0O/view))**
 
 The documentation covers:
 - Activity Classification (Scope vs Non-Scope)
@@ -283,14 +283,6 @@ The documentation covers:
 
 - GitHub: [@SontuCoder](https://github.com/SontuCoder)
 - Backend: [Library_FastAPI](https://github.com/SontuCoder/Library_FastAPI)
-
----
-
-## 🙏 Acknowledgements
-
-- [UiPath Community](https://github.com/UiPath/Community.Activities) for the activity template
-- [FastAPI](https://fastapi.tiangolo.com/) for the blazing fast backend framework
-- [ReportLab](https://www.reportlab.com/) for PDF generation
 
 ---
 
