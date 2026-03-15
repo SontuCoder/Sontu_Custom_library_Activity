@@ -2,8 +2,6 @@
 
 <div align="center">
 
-![Sontu.Activities Banner](page_1.png)
-
 <br/>
 
 [![UiPath](https://img.shields.io/badge/UiPath-2021.10+-orange?style=for-the-badge&logo=uipath)](https://www.uipath.com/)
